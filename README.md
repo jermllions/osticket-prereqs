@@ -1,32 +1,32 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
-</p>
-
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<img width="1074" height="499" alt="image" src="https://github.com/user-attachments/assets/4c6a6c45-4b15-4273-9903-eec87961e8fa" />
 
 
-<h2>Video Demonstration</h2>
+This project continues from the previously established Active Directory Domain Services environment hosted in Microsoft Azure. The lab demonstrates how Group Policy can be used to enforce account lockout thresholds, how administrators unlock and reset accounts, and how enabling or disabling accounts impacts authentication. Additionally, system and security logs are reviewed to understand how these events are recorded on both the Domain Controller and client machines. As an additional observation, external failed login attempts were visible in Event Viewer due to Remote Desktop exposure, providing practical insight into real-world security considerations such as firewall rules and account lockout policies.
+This exercise reinforces real-world administrative tasks commonly performed by IT support and system administrators in enterprise environments.
 
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
+
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+- Platform: Microsoft Azure (Virtual Machines/Compute)
+- Remote Access: Microsoft Remote Desktop 3389
+- Services: Active Directory Domain Services
+- Tools: PowerShell, Group Policy Management, Windows Event Viewer
+- Operating Systems: Windows 10/11
 
-<h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+<h2>High-Level Deployment and Configuration Steps
 
-<h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+<h2>Key Actions<h2>
+
+- 1.Configure account lockout policy in Group Policy Management.
+- 2.Trigger account lockout through repeated failed login attempts.
+- 3.Unlock and reset a user account in Active Directory Users and Computers.
+- 4.Disable and re-enable user accounts to observe authentication behavior.
+- 5.Review security and authentication logs on both domain controller and client machines.
+- 6.Optional: Observe external failed login attempts due to Remote Desktop exposure.
 
 <h2>Installation Steps</h2>
 
