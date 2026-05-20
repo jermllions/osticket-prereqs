@@ -30,7 +30,7 @@
 
 
 
-<small>With the domain environment already established, the project continues by expanding domain management and user access. After initially accessing the client and domain controller with local credentials, Organizational Units are created for Employees and Administrators, followed by the creation of a dedicated Domain Admin account. The client virtual machine is then joined to the domain and organized within a Clients OU. Remote Desktop access is configured to allow standard domain users to sign in, and PowerShell automation is used to bulk-create user accounts within the Employees OU to simulate real-world provisioning tasks<small>
+<sub>With the domain environment already established, the project continues by expanding domain management and user access. After initially accessing the client and domain controller with local credentials, Organizational Units are created for Employees and Administrators, followed by the creation of a dedicated Domain Admin account. The client virtual machine is then joined to the domain and organized within a Clients OU. Remote Desktop access is configured to allow standard domain users to sign in, and PowerShell automation is used to bulk-create user accounts within the Employees OU to simulate real-world provisioning tasks</sub>
 
 
 
@@ -94,6 +94,103 @@ Our Jane Doe is now an Admin, log out of the "vm-dc-1" and log back in with Jane
 <sub>On your local machine, create another instance of Remote Desktop Connection, and Remote Deskop into "vm-client-1" using the public IP Address, and with your original admin user created in Azure but with domain credentials, mydomain.com\<yourcreatedcredentials> and password. Right-click the Windows start menu and select "System". Find and select "Rename this PC (advanced) on the right hand side > Select "Change" beside "To rename this computer or change its domain...". Under "Member of" select Domain, in the text field, type our created domain, "mydomain.com"</sup>
 
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/b8ef06d9-850a-49a3-b72c-1bd182aaa2e6" />
+
+Note: Because we configured client’s DNS to point to "vm-dc-1"," it can resolve the domain name and locate the Active Directory domain controller, which allows the domain login screen to appear.
+
+
+
+
+
+
+Admin privileges are required to change this setting. Login using Jane Doe's username with domain credentials. Since Jane has admin rights, it will allow us to join the domain. You'll receive a pop-up that welcomes us to the domain. Click through the prompts, and close the system properties window, and select "Restart Now". And let Client 1 restart.
+
+Back in our Domain Controller VM, reopen the Active Directory Users and Computers settings. Expand the domain tree and verify "vm-client-1" shows up in the Computers folder.
+
+
+
+
+
+<img width="600" height="529" alt="image" src="https://github.com/user-attachments/assets/f096d960-753a-4a1e-afb0-9ba0553a6914" />
+
+
+Right-click on our domain, and create a new OU "_CLIENTS". Drag "vm-client-1" from the Computers folder into the _CLIENTS folder.
+<img width="500" height="525" alt="image" src="https://github.com/user-attachments/assets/db6a7fc7-de8b-4b96-9309-b535b52128b0" />
+
+
+note: This OU structure illustrates best practices for directory organization by grouping administrators, employees, and client systems into separate management containers.
+
+
+<h2>3. ENABLE REMOTE DESKTOP FOR USERS<h2>
+  
+Currently, users can sign in only when physically present at the computer; enabling Remote Desktop allows them to securely log in from another workstation and access their environment, which is a common practice in many organizations for flexibility and support.
+
+
+Login to VM Client 1, with Jane Doe using domain credentials. Right-click the Windows start menu, and select "System". Find "Remote Desktop" on the right hand side. Under User accounts, select "Select users that can remotely..." > Select "Add..", in the Object names field, type "Domain Users" and select Check Names, once underlined, we can select OK.
+
+
+<img width="800" height="729" alt="image" src="https://github.com/user-attachments/assets/4b338bd6-037a-4d88-a391-e7442b01f583" />
+ Non-admin users can now log in. We will create those accounts in the next step. For now, sign out of "vm-client-1"
+
+
+
+
+
+
+
+Note: “Domain Users” is a built-in security group in Active Directory that automatically includes all standard user accounts created    within the domain.
+
+
+Note: Normally, Remote Desktop access is enabled through Group Policy, which allows administrators to configure this setting across multiple client machines at once.
+
+
+
+
+
+
+
+
+
+
+<h2>4. CREATE EMPLOYEE USERS WITH AUTOMATION<h2>
+
+We will automate the creation of multiple user accounts to simulate a real-world scenario where an IT administrator receives a list of new employees from HR. The script will generate these accounts in bulk while automatically placing them into the _EMPLOYEES OU.
+
+Copy the folder "ad-script" from repository and place it on the desktop of "vm-dc-1". Open PowerShell ISE as Administrator, and open the AD PS Script file.
+
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/d2c1be29-f1e1-47bc-ae0a-2fd9354a2f77" />
+
+
+Note: the line $PASSWORD_FOR_USERS   = "Password1" this indicates all accounts will be created with the same password. Run the script and observe the accounts being generated. When the script finishes, open Active Directory Users and Computers and verify the new users appear in the _EMPLOYEES OU.
+
+
+
+
+
+
+
+
+
+
+<sub>Lastly, let's test the new accounts, choose any username and note the password from the script. Remote Desktop back into "vm-client-1" using the newly created credentials and confirm the account works successfully</sub>
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="957" height="477" alt="created employees" src="https://github.com/user-attachments/assets/727c1b7d-629a-472c-b9ad-6187240b83b0" />
+
+
+
+
+
 
 
 
