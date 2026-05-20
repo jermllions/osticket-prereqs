@@ -49,3 +49,10 @@
 1. CREATE A DOMAIN ADMIN USER.
 
 On your local machine, Remote Deskop into "vm-dc-1" using the public IP Address, and with your original admin user created in Azure but with domain credentials, mydomain.com\<yourcreatedcredentials> and password. In the Windows search bar, find "Active Directory Users and Computers" (ADUC), alternatively you can go Start Menu > Windows Administrative Tools > Active Directory Users and Computers. Expand the “mydomain.com” domain. Right-click the domain and select New > Organizational Unit.
+
+
+
+
+
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/11fb0c7d-2f8d-4b43-ac3a-a2d3c3a9f09f" />
+
