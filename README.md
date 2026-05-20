@@ -73,6 +73,6 @@ For the purposes of this lab, a simplified password policy is used to streamline
 
 
 
-<img width="742" height="550" alt="image" src="https://github.com/user-attachments/assets/ff80f495-dc79-498d-b964-4fa7b5d27f6f" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/ff80f495-dc79-498d-b964-4fa7b5d27f6f" />
 
 
