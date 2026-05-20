@@ -76,3 +76,15 @@ For the purposes of this lab, a simplified password policy is used to streamline
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/ff80f495-dc79-498d-b964-4fa7b5d27f6f" />
 
 
+
+
+Even though Jane Doe was created in our _ADMINS folder, it does not automatically designate her as admin, we will need to add her to the built-in Domain Admins Security Group. Right-click user Jane Doe, find tab "Member of" and select "Add..", in the Object names field, type "Domain Admins" and select Check Names, once underlined, we can select OK. Keep the Remote Connection on.
+
+
+
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/bf2ec6cf-75e1-45a4-8a21-f9de984f663e" />
+
+
+
+
