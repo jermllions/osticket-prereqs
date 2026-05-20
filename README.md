@@ -189,7 +189,35 @@ Note: the line $PASSWORD_FOR_USERS   = "Password1" this indicates all accounts w
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="569" height="390" alt="emplyes user lock" src="https://github.com/user-attachments/assets/d6706150-ae57-4d3d-9b39-172aa310959b" />
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1357" height="602" alt="last2" src="https://github.com/user-attachments/assets/b91e7799-00ed-4fc5-820c-789ba5b1bf73" />
+
 
 
 
