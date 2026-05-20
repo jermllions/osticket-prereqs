@@ -56,3 +56,23 @@ On your local machine, Remote Deskop into "vm-dc-1" using the public IP Address,
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/11fb0c7d-2f8d-4b43-ac3a-a2d3c3a9f09f" />
 
+
+
+
+
+
+
+
+In the Name field, type “_EMPLOYEES”. An underscore is used to differentiate this Organizational Unit from the default Windows containers within the domain tree. Repeat steps to create a new OU for "_ADMINS". Right-click our Admins folder and select New > User. Create user Jane Doe, with a username "jane_admin" and select Next, in the Password screen, unmark the checkbox for "User must change password at next logon", and mark "Password never expires check box", and choose a password.
+
+
+
+
+For the purposes of this lab, a simplified password policy is used to streamline setup and testing; however, these settings would not be recommended in a production environment.
+
+
+
+
+<img width="742" height="550" alt="image" src="https://github.com/user-attachments/assets/ff80f495-dc79-498d-b964-4fa7b5d27f6f" />
+
+
