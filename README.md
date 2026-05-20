@@ -88,5 +88,12 @@ Even though Jane Doe was created in our _ADMINS folder, it does not automaticall
 Our Jane Doe is now an Admin, log out of the "vm-dc-1" and log back in with Jane Doe's username, using domain credentials, mydomain.com\jane_admin and password. We will continue using Jane Doe from now on.
 
 
+<h2>2. JOIN VM CLIENT 1 TO DOMAIN<h2>
+
+  
+<sub>On your local machine, create another instance of Remote Desktop Connection, and Remote Deskop into "vm-client-1" using the public IP Address, and with your original admin user created in Azure but with domain credentials, mydomain.com\<yourcreatedcredentials> and password. Right-click the Windows start menu and select "System". Find and select "Rename this PC (advanced) on the right hand side > Select "Change" beside "To rename this computer or change its domain...". Under "Member of" select Domain, in the text field, type our created domain, "mydomain.com"</sup>
+
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/b8ef06d9-850a-49a3-b72c-1bd182aaa2e6" />
+
 
 
