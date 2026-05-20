@@ -85,6 +85,8 @@ Even though Jane Doe was created in our _ADMINS folder, it does not automaticall
 
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/bf2ec6cf-75e1-45a4-8a21-f9de984f663e" />
 
+Our Jane Doe is now an Admin, log out of the "vm-dc-1" and log back in with Jane Doe's username, using domain credentials, mydomain.com\jane_admin and password. We will continue using Jane Doe from now on.
+
 
 
 
