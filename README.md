@@ -172,7 +172,7 @@ Note: the line $PASSWORD_FOR_USERS   = "Password1" this indicates all accounts w
 
 
 
-<sub>Lastly, let's test the new accounts, choose any username and note the password from the script. Remote Desktop back into "vm-client-1" using the newly created credentials and confirm the account works successfully</sub>
+<sub>Lastly, let's test the new accounts, choose any username and note the password from the script. Remote Desktop back into "vm-client-1" using the newly created credentials bab.vad  and confirm the account works successfully</sub>
 
 
 
@@ -188,6 +188,19 @@ Note: the line $PASSWORD_FOR_USERS   = "Password1" this indicates all accounts w
 <img width="957" height="477" alt="created employees" src="https://github.com/user-attachments/assets/727c1b7d-629a-472c-b9ad-6187240b83b0" />
 
 
+
+<img width="569" height="390" alt="emplyes user lock" src="https://github.com/user-attachments/assets/d6706150-ae57-4d3d-9b39-172aa310959b" />
+
+
+
+
+
+
+
+
+
+
+<img width="850" height="477" alt="client 1 (1)" src="https://github.com/user-attachments/assets/dadb8e31-0e3b-47e9-b38e-80bb01949b69" />
 
 
 
